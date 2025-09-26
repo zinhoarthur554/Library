@@ -36,6 +36,12 @@ UISize = {550, 380},
 TabSize = 160,
 Theme = "Darker"
 },
+Font = {
+Primary = Enum.Font.SourceSansBold,
+Secondary = Enum.Font.SourceSans,
+Header = Enum.Font.SourceSansBold,
+Button = Enum.Font.SourceSansBold
+},
 	Settings = {},
 	Connection = {},
 	Instances = {},
