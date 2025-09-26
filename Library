@@ -36,12 +36,35 @@ UISize = {550, 380},
 TabSize = 160,
 Theme = "Darker"
 },
-Font = {
-Primary = Enum.Font.SourceSansBold,
-Secondary = Enum.Font.SourceSans,
-Header = Enum.Font.SourceSansBold,
-Button = Enum.Font.SourceSansBold
+FontSettings = {
+FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+FontFamily = Enum.Font.SourceSansBold,
+ForceFont = true
 },
+
+-- Função para forçar fonte em todos os elementos de texto
+ApplyFont = function(self, textObject)
+if textObject and textObject:IsA("TextLabel") or textObject:IsA("TextButton") or textObject:IsA("TextBox") then
+textObject.FontFace = self.FontSettings.FontFace
+textObject.Font = self.FontSettings.FontFamily
+end
+end,
+
+-- Função para aplicar fonte em todos os descendentes
+ApplyFontToAll = function(self, parent)
+for _, child in pairs(parent:GetDescendants()) do
+if child:IsA("TextLabel") or child:IsA("TextButton") or child:IsA("TextBox") then
+self:ApplyFont(child)
+end
+end
+
+-- Listener para novos elementos
+parent.DescendantAdded:Connect(function(child)
+if child:IsA("TextLabel") or child:IsA("TextButton") or child:IsA("TextBox") then
+self:ApplyFont(child)
+end
+end)
+end
 	Settings = {},
 	Connection = {},
 	Instances = {},
