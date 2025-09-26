@@ -12,15 +12,20 @@ local redzlib = {
 Themes = {
 Darker = {
 ["Color Hub 1"] = ColorSequence.new({
-ColorSequenceKeypoint.new(0.00, Color3.fromRGB(80, 80, 80)),
-ColorSequenceKeypoint.new(0.50, Color3.fromRGB(160, 160, 160)),
-ColorSequenceKeypoint.new(1.00, Color3.fromRGB(220, 220, 220))
+ColorSequenceKeypoint.new(0.00, Color3.fromRGB(30, 15, 45)),
+ColorSequenceKeypoint.new(0.25, Color3.fromRGB(80, 40, 120)),
+ColorSequenceKeypoint.new(0.50, Color3.fromRGB(150, 100, 200)),
+ColorSequenceKeypoint.new(0.75, Color3.fromRGB(200, 150, 255)),
+ColorSequenceKeypoint.new(1.00, Color3.fromRGB(180, 120, 240))
 }),
-["Color Hub 2"] = Color3.fromRGB(60, 60, 60),
-["Color Stroke"] = Color3.fromRGB(200, 200, 200),
-["Color Theme"] = Color3.fromRGB(120, 120, 120),
-["Color Text"] = Color3.fromRGB(240, 240, 240),
-["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
+["Color Hub 2"] = Color3.fromRGB(25, 10, 35),
+["Color Stroke"] = Color3.fromRGB(200, 150, 255),
+["Color Theme"] = Color3.fromRGB(50, 25, 75),
+["Color Text"] = Color3.fromRGB(240, 220, 255),
+["Color Dark Text"] = Color3.fromRGB(200, 180, 230),
+["Color Metallic Highlight"] = Color3.fromRGB(255, 240, 255),
+["Color Metallic Shadow"] = Color3.fromRGB(60, 30, 90),
+["Color Shine"] = Color3.fromRGB(220, 200, 255)
 }
 },
 Info = {
